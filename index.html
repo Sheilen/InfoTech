@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Infotech App</title>
+
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+<script src="js/jquery-1.4.4.min.js"></script>
+
+</head>
+
+
+<body>
+
+
+<script  type="text/javascript">
+// This script was supplied by Dave Joosten
+// For support and info go read the Tutorial at http://www.dmxzone.com/ShowDetail.asp?NewsId=5417|
+var id = 3; // Total number of images
+var ranimage = new Array(id); // Array to hold the filenames
+
+ranimage[0] = "img/drone1_1.png";
+ranimage[1] = "img/drone2.png";
+ranimage[2] = "img/drone3.png";
+
+function choseRandom(range) {
+if (Math.random)
+return Math.round(Math.random() * (range-1));
+else {
+var now = new Date();
+return (now.getTime() / 1000) % range;
+}
+}
+// 
+var choice = choseRandom(id);
+</script>
+
+<script >document.writeln('<td' + '><img src="' + ranimage[choice] + '" height="auto" width="100%" id="Image1" align="center"><' + '/td>');</script>
+ <script>
+$("#Image1" ).fadeIn(3500, function(){location.href = "TESt/store/index.html"});
+</script>
+</body>
+
+</html>
